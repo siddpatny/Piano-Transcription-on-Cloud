@@ -2,7 +2,7 @@
 
 # deploy a new image to kubernetes
 ```
-export PROJECT_ID=piano-transcription-276101
+export PROJECT_ID={your-project-id}
 docker build -t gcr.io/${PROJECT_ID}/transcription:<a new tag> .
 docker push gcr.io/piano-transcription-276101/transcription:<a new tag>
 kubectl set image deployment/transcribe transcription=gcr.io/${PROJECT_ID}/transcription:<a new tag>
